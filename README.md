@@ -69,7 +69,7 @@ javac exercicio-12/Exercicio12.java
 java -cp exercicio-12 Exercicio12
 ```
 
-A execução segue as etapas a–e em ordem, usa o ISBN gerado pela API e imprime status HTTP e resposta em todas as requisições. A atualização usa preço 7.99 e estoque 10 para demonstrar a alteração. POST deve ser confirmado antes de executar PUT e DELETE.
+A execução segue as etapas a–e em ordem, aceita ISBN-13 com ou sem hífens e usa o ISBN gerado pela API e imprime status HTTP e resposta em todas as requisições. A atualização usa preço 7.99 e estoque 10 para demonstrar a alteração. POST deve ser confirmado antes de executar PUT e DELETE.
 
 ## APIs utilizadas
 
