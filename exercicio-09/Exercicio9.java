@@ -7,7 +7,7 @@ import java.net.URL;
 import java.nio.charset.StandardCharsets;
 
 public class Exercicio9 {
-    private static final String ENDPOINT = "https://apichallenges.eviltester.com/sim/entities/9";
+    private static final String ENDPOINT = "https://apichallenges.com/sim/entities/9";
 
     public static void main(String[] args) {
         executar("DELETE");
