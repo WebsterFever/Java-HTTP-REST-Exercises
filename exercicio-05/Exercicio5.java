@@ -14,7 +14,7 @@ public class Exercicio5 {
         HttpURLConnection conexao = null;
 
         try {
-            URL url = new URL("https://apichallenges.eviltester.com/sim/entities");
+            URL url = new URL("https://apichallenges.com/sim/entities");
             conexao = (HttpURLConnection) url.openConnection();
             conexao.setRequestMethod("POST");
             conexao.setRequestProperty("Content-Type", "application/json; charset=UTF-8");
