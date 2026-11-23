@@ -51,14 +51,27 @@ public class Exercicio12 {
     }
 
     private static String extrairIsbn(String corpo) {
-        // A API pode retornar o ISBN como texto puro ou dentro de um objeto JSON.
-        Matcher campo = Pattern.compile("\"isbn13\"\\s*:\\s*\"?([0-9]{13})\"?")
-                .matcher(corpo);
+        // Aceita ISBN-13 com ou sem hífens, em JSON ou como texto simples.
+        Matcher campo = Pattern.compile(
+                "\"(?:isbn13|isbn)\"\\s*:\\s*\"?([0-9][0-9-]{11,20}[0-9])\"?",
+                Pattern.CASE_INSENSITIVE
+        ).matcher(corpo);
         if (campo.find()) {
-            return campo.group(1);
+            String isbn = campo.group(1);
+            if (isbn.replace("-", "").matches("[0-9]{13}")) {
+                return isbn;
+            }
         }
-        Matcher numero = Pattern.compile("\\b[0-9]{13}\\b").matcher(corpo);
-        return numero.find() ? numero.group() : null;
+
+        Matcher numero = Pattern.compile("(?<![0-9])[0-9][0-9-]{11,20}[0-9](?![0-9])")
+                .matcher(corpo);
+        while (numero.find()) {
+            String isbn = numero.group();
+            if (isbn.replace("-", "").matches("[0-9]{13}")) {
+                return isbn;
+            }
+        }
+        return null;
     }
 
     private static Resultado requisicao(String metodo, String endereco, String json) {
