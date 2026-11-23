@@ -11,7 +11,7 @@ public class Exercicio11 {
         HttpURLConnection conexao = null;
 
         try {
-            URL url = new URL("https://apichallenges.eviltester.com/sim/entities");
+            URL url = new URL("https://apichallenges.com/sim/entities");
             conexao = (HttpURLConnection) url.openConnection();
             conexao.setRequestMethod("OPTIONS");
             conexao.setConnectTimeout(10000);
