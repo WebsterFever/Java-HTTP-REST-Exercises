@@ -12,7 +12,7 @@ public class Exercicio4 {
         HttpURLConnection conexao = null;
 
         try {
-            String endpoint = "https://apichallenges.eviltester.com/sim/entities";
+            String endpoint = "https://apichallenges.com/sim/entities";
             String categoria = URLEncoder.encode("teste", StandardCharsets.UTF_8.name());
             String limite = URLEncoder.encode("5", StandardCharsets.UTF_8.name());
             String urlFinal = endpoint + "?categoria=" + categoria + "&limite=" + limite;
