@@ -69,7 +69,7 @@ javac exercicio-12/Exercicio12.java
 java -cp exercicio-12 Exercicio12
 ```
 
-A execução segue as etapas a–e em ordem, aceita ISBN-13 com ou sem hífens e usa o ISBN gerado pela API e imprime status HTTP e resposta em todas as requisições. A atualização usa preço 7.99 e estoque 10 para demonstrar a alteração. POST deve ser confirmado antes de executar PUT e DELETE.
+A execução segue as etapas a–e em ordem, aceita ISBN-13 com ou sem hífens e usa o ISBN gerado pela API e imprime status HTTP e resposta em todas as requisições. A atualização usa preço 7.99 e estoque 10 para demonstrar a alteração. POST deve ser confirmado antes de executar PUT e DELETE. O ID numérico retornado pelo POST é usado em `/simpleapi/items/{id}` para PUT e DELETE; o programa também faz GET para verificar a atualização e a exclusão.
 
 ## APIs utilizadas
 
