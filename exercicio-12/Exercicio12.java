@@ -41,13 +41,38 @@ public class Exercicio12 {
             return;
         }
 
+        String id = extrairId(criacao.corpo);
+        if (id == null) {
+            System.out.println("ID do item criado não identificado. PUT e DELETE cancelados.");
+            return;
+        }
+        System.out.println("ID criado: " + id);
+
+        String itemUrl = ITEMS + "/" + id;
         System.out.println("\nd) PUT - Atualizar item");
         String jsonAtualizacao = "{\"type\":\"book\",\"isbn13\":\"" + isbn
                 + "\",\"price\":7.99,\"numberinstock\":10}";
-        requisicao("PUT", ITEMS, jsonAtualizacao);
+        Resultado atualizacao = requisicao("PUT", itemUrl, jsonAtualizacao);
+        if (atualizacao == null || atualizacao.status < 200 || atualizacao.status >= 300) {
+            System.out.println("Atualização não confirmada. Exclusão cancelada para permitir análise.");
+            return;
+        }
+
+        System.out.println("\nGET - Verificar atualização");
+        requisicao("GET", itemUrl, null);
 
         System.out.println("\ne) DELETE - Remover item");
-        requisicao("DELETE", ITEMS + "/" + isbn, null);
+        Resultado exclusao = requisicao("DELETE", itemUrl, null);
+        if (exclusao != null && exclusao.status >= 200 && exclusao.status < 300) {
+            System.out.println("\nGET - Confirmar remoção");
+            requisicao("GET", itemUrl, null);
+        }
+
+    }
+
+    private static String extrairId(String corpo) {
+        Matcher id = Pattern.compile("\"id\"\\s*:\\s*(\\d+)").matcher(corpo);
+        return id.find() ? id.group(1) : null;
     }
 
     private static String extrairIsbn(String corpo) {
