@@ -6,9 +6,9 @@ Exercícios práticos de requisições HTTP e APIs REST utilizando Java e `HttpU
 
 | Exercício | Objetivo | Método | Endpoint |
 | --- | --- | --- | --- |
-| [01](exercicio-01/Exercicio1.java) | Listar todas as entidades | GET | `https://apichallenges.eviltester.com/sim/entities` |\n| [02](exercicio-02/Exercicio2.java) | Consultar entidades de ID 1 a 8 | GET | `https://apichallenges.eviltester.com/sim/entities/{id}` |\n| [03](exercicio-03/Exercicio3.java) | Consultar entidade inexistente e tratar 404 | GET | `https://apichallenges.eviltester.com/sim/entities/13` |\n| [04](exercicio-04/Exercicio4.java) | GET com parâmetros fictícios na URL | GET | `https://apichallenges.eviltester.com/sim/entities?categoria=teste&limite=5` |
+| [01](exercicio-01/Exercicio1.java) | Listar todas as entidades | GET | `https://apichallenges.com/sim/entities` |\n| [02](exercicio-02/Exercicio2.java) | Consultar entidades de ID 1 a 8 | GET | `https://apichallenges.com/sim/entities/{id}` |\n| [03](exercicio-03/Exercicio3.java) | Consultar entidade inexistente e tratar 404 | GET | `https://apichallenges.com/sim/entities/13` |\n| [04](exercicio-04/Exercicio4.java) | GET com parâmetros fictícios na URL | GET | `https://apichallenges.com/sim/entities?categoria=teste&limite=5` |
 
-| [05](exercicio-05/Exercicio5.java) | Criar entidade com JSON e identificar ID retornado | POST | `https://apichallenges.eviltester.com/sim/entities` |\n| [06](exercicio-06/Exercicio6.java) | Consultar entidade 11 e verificar resposta | GET | `https://apichallenges.eviltester.com/sim/entities/11` |\n\n| [07](exercicio-07/Exercicio7.java) | POST para atualizar entidade 10 e GET de verificação | POST / GET | `/sim/entities/10` |
+| [05](exercicio-05/Exercicio5.java) | Criar entidade com JSON e identificar ID retornado | POST | `https://apichallenges.com/sim/entities` |\n| [06](exercicio-06/Exercicio6.java) | Consultar entidade 11 e verificar resposta | GET | `https://apichallenges.com/sim/entities/11` |\n\n| [07](exercicio-07/Exercicio7.java) | POST para atualizar entidade 10 e GET de verificação | POST / GET | `/sim/entities/10` |
 | [08](exercicio-08/Exercicio8.java) | PUT para atualizar entidade 10 e GET de verificação | PUT / GET | `/sim/entities/10` |
 
 | [09](exercicio-09/Exercicio9.java) | DELETE da entidade 9 e GET para verificar 404 | DELETE / GET | `/sim/entities/9` |
@@ -73,5 +73,5 @@ A execução segue as etapas a–e em ordem, usa o ISBN gerado pela API e imprim
 
 ## APIs utilizadas
 
-- https://apichallenges.eviltester.com/sim/entities
-- https://apichallenges.eviltester.com/simpleapi/items
+- https://apichallenges.com/sim/entities
+- https://apichallenges.com/simpleapi/items
