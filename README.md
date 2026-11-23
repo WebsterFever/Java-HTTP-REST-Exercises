@@ -14,6 +14,8 @@ Exercícios práticos de requisições HTTP e APIs REST utilizando Java e `HttpU
 | [09](exercicio-09/Exercicio9.java) | DELETE da entidade 9 e GET para verificar 404 | DELETE / GET | `/sim/entities/9` |
 | [10](exercicio-10/Exercicio10.java) | DELETE inválido da entidade 2 | DELETE | `/sim/entities/2` |
 
+| [11](exercicio-11/Exercicio11.java) | OPTIONS e leitura do cabeçalho Allow | OPTIONS | `/sim/entities` |
+
 Cada exercício fica em sua própria pasta. Há apenas este README na raiz.
 
 ## Executar o exercício 1
@@ -48,6 +50,15 @@ java -cp exercicio-10 Exercicio10
 ```
 
 O exercício 9 executa DELETE seguido de GET e mostra o status real de ambas as respostas. Como a API é stateless, a exclusão pode não persistir e o GET pode não retornar 404. O exercício 10 verifica o status real do DELETE (esperado 403 ou 405).
+
+## Executar o exercício 11
+
+```bash
+javac exercicio-11/Exercicio11.java
+java -cp exercicio-11 Exercicio11
+```
+
+O programa exibe o status HTTP, o cabeçalho `Allow` (quando presente) e o corpo da resposta do servidor.
 
 ## APIs utilizadas
 
