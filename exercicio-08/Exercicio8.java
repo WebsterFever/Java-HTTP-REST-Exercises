@@ -3,7 +3,7 @@ import java.net.*;
 import java.nio.charset.StandardCharsets;
 
 public class Exercicio8 {
-    private static final String URL_API = "https://apichallenges.eviltester.com/sim/entities/10";
+    private static final String URL_API = "https://apichallenges.com/sim/entities/10";
 
     public static void main(String[] args) {
         executar("PUT", "{\"name\":\"atualizado\"}");
