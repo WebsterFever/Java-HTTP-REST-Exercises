@@ -10,8 +10,8 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Exercicio12 {
-    private static final String ITEMS = "https://apichallenges.eviltester.com/simpleapi/items";
-    private static final String RANDOM_ISBN = "https://apichallenges.eviltester.com/simpleapi/randomisbn";
+    private static final String ITEMS = "https://apichallenges.com/simpleapi/items";
+    private static final String RANDOM_ISBN = "https://apichallenges.com/simpleapi/randomisbn";
 
     public static void main(String[] args) {
         System.out.println("a) GET - Todos os itens");
